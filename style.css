@@ -255,6 +255,70 @@ header{
     transform: scale(1.03);
 }
 
+.popup-image {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.815);
+    z-index: 10000;      /* VERY HIGH to cover everything */
+    pointer-events: auto; /* Important: allow clicks */
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+.popup-image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    width: auto; /* Allow natural width */
+    max-width: 90vw; /* Maximum width: 90% of the viewport width */
+    max-height: 90vh; /* Maximum height: 90% of the viewport height */
+    object-fit: contain; /* Ensures the full image is visible */
+}
+
+/* --- FLÈCHES POPUP --- */
+.popup-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 60px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    padding: 20px; 
+    z-index: 200;
+}
+
+.popup-arrow.left {
+    left: 30px;
+}
+
+.popup-arrow.right {
+    right: 30px;
+}
+
+/* --- COMPTEUR --- */
+.popup-counter {
+    color: white;
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    user-select: none;
+}
+
+/* --- CONTAINER BAS MOBILE --- */
+.popup-bottom {
+    display: none;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+    gap: 25px;
+    z-index: 300;
+}
 
 
 .list {
