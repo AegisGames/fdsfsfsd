@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="style.css">
     
 </head>
-<body>
-    <body class="is-loading">
+<body class="is-loading">
+
 
     <div class="content">
     <header>
@@ -112,17 +112,20 @@
     <!-- Custom Cursor Element -->
     <div id="cursor"><span id="cursor-text"></span></div>
 
-      <div class="loader-wrapper">
-      <span class="loader"><span class="loader-inner"></span></span>
-    </div>
+     <div class="loader-wrapper">
+  <img src="img/0005.gif" alt="Loading..." class="loader-gif">
+</div>
 
-   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<script>
+   <script>
   $(window).on("load", function () {
-    $(".loader-wrapper").fadeOut("slow");
+    $("body").removeClass("is-loading");
+    $(".loader-wrapper").fadeOut(500);
   });
 </script>
+
+
+
 
 <script src="main copy.js"></script>
 
