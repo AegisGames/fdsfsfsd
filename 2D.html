@@ -235,9 +235,16 @@
     <div id="cursor"><span id="cursor-text"></span></div>
 
 
-    <script>
+    <div class="loader-wrapper">
+  <img src="img/0005.gif" alt="Loading..." class="loader-gif">
+</div>
 
 
+   <script>
+  $(window).on("load", function () {
+    $("body").removeClass("is-loading");
+    $(".loader-wrapper").fadeOut(500);
+  });
 </script>
 <script src="main.js"></script>
 </body>

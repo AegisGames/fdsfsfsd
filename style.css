@@ -49,18 +49,6 @@ section{
 }
 
 .loader-wrapper {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgb(10, 10, 10);
-  display:flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.loader-wrapper {
   position: fixed;
   inset: 0;
   background-color: rgb(10, 10, 10);
@@ -68,7 +56,7 @@ section{
   justify-content: center;
   align-items: center;
   transition: opacity 0.5s ease;
-  z-index: 1000; /* under header */
+  z-index: 1000;
 }
 
 .loader-gif {
